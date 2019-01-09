@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+/*
+The method person get a string with this format : "name,last name,age"
+for example: 
+person("jon,doe,30");
+the output is
+person name: jon last name: doe age: 30*/
+
+class Main {
+  public static void main(String[] args) {
+    Scanner inp = new Scanner(System.in);
+    String s = inp.next();
+    person(s) ;
+  }
+  public static void person(String info) {
+		 String [] splitted = info.split(","); 
+		 System.out.println("person name: " +splitted [0] + " " + "last name: " + splitted[1] + 
+				 							" " + "age: " + splitted[2]);
+	}
+  
+}
