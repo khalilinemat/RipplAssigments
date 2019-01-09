@@ -1,0 +1,36 @@
+
+/*at3 gets two strings and returns a string.
+
+the first string is the one that will be manipulated. at the 3rd char position of target you will insert the word argument.
+
+example use:
+
+at3("longword","foo")
+will return: "lonfoogword"
+
+at3("blabla","a")
+will return: "blaabla"
+
+at3 gets two strings and returns a string.
+
+the first string is the one that will be manipulated. at the 3rd char position of target you will insert the word argument.
+
+example use:
+
+at3("longword","foo")
+will return: "lonfoogword"
+
+at3("blabla","a")
+will return: "blaabla"*/ 
+
+class Main {
+  public static String at3(String target,String word){
+    
+      String str = target.substring(0, 3); 
+		  String str1 = target.substring(3); 
+		  String result = str + word + str1; 
+		  
+		  return result;    
+    
+  }
+}
