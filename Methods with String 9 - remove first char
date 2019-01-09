@@ -1,0 +1,16 @@
+
+/*
+The method gets a string and returns a string minus the first string.
+for example:
+removeFirst("aaa")
+returns "aa"
+*/
+
+class Main {
+ 
+ public static String removeFirst(String target) {
+		
+		String result = target.substring(1); 
+		return result; 
+	}
+}
