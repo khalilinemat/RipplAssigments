@@ -10,9 +10,7 @@ is
 fun
 */
 
-
-
-
+//Code bellow here 
 class Main {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
@@ -20,13 +18,11 @@ class Main {
     
     //type your code below
     
-		String [] arrstr = sentence.split(" "); 
-		
-		for (int idx = 0; idx < arrstr.length; idx++) {
-			
-			System.out.println(arrstr[idx]);
-		}
-	
-    
+	String [] arrstr = sentence.split(" "); 
+
+	for (int idx = 0; idx < arrstr.length; idx++) {
+
+		System.out.println(arrstr[idx]);
+	}
+     }
   }
-}
