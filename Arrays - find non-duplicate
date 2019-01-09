@@ -1,0 +1,33 @@
+
+import java.util.*;
+
+/*
+Given an array nums with 7 integers every element is repeated twice - except one. 
+Find that element and print it to console.
+Example:
+nums -> [1, 1, 2, 3, 4, 3, 4]
+         2
+*/
+
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int[] nums = {input.nextInt(), input.nextInt(),input.nextInt(),input.nextInt(),input.nextInt(),input.nextInt(),input.nextInt()};
+  
+    int duplicate = 0;
+		boolean isDuplicate = false; 
+		for (int idx = 0; idx < nums.length; idx++) {
+			int currentNum = nums[idx];
+			isDuplicate = false; 
+			for (int j = 0; j < nums.length; j++) {
+				if (nums[j] == currentNum && idx != j) {
+					isDuplicate = true;
+					break; 
+				}
+			}
+				if (!isDuplicate) {
+					System.out.println(currentNum);
+				}
+	   }
+  }
+}
