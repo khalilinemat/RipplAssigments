@@ -1,0 +1,44 @@
+
+import java.util.*;
+
+/*The matrix movie producers want all the green text to be 01010101
+They already made a few arrays of string to run but they have other strings that are not 0101
+loop the array and fix it.
+Basically, you get a 2d array with strings, you must make sure all the values are 0,1,0,1
+
+for example arr is  :
+ ["a","d","2",""4]
+ ["1","2","3","4"]
+ ["2","1","q","0"]
+turn it to:
+ ["0","1","0","1"]
+ ["0","1","0","1"]
+ ["0","1","0","1"] */
+
+class Main {
+  
+  public static void main(String[] args) {
+    Scanner inp = new Scanner(System.in);
+    int rows = inp.nextInt(), cols = inp.nextInt();
+    String[][] arr = new String[rows][cols];
+    for(int i=0 ;i<=rows-1;i++)
+    {
+      for(int j=0 ;j<=cols-1;j++)
+      {
+        arr[i][j]=inp.next();
+      }//end for cols
+    }//end for rwos
+    
+  for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) { 
+				if (j % 2 == 0) {
+					arr[i][j] = "0"; 
+				} else {
+					arr[i][j] = "1"; 
+				}
+			}
+		}
+  
+    System.out.println( Arrays.deepToString(arr) ) ;
+  }//end main
+}
