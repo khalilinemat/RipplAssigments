@@ -1,0 +1,39 @@
+import java.util.*;
+
+/*
+Binary number is a number expressed in the base-2 numeral system or binary numeral system, which uses only two symbols: 
+typically 0 (zero) and 1 (one). Each digit is referred to as a bit.
+Given an int variable decimal,  write java program to calculate binary value of the decimal variable and assign 
+it binary array. print out value of binary array matching below format. Feel free to use additional arrays or formulas.
+
+Example:
+decimal -> 3
+binary -> [0, 0, 0, 0, 0, 0, 1, 1]
+
+decimal -> 35
+binary -> [0, 0, 1, 0, 0, 0, 1, 1]
+
+decimal -> 255
+binary -> [1, 1, 1, 1, 1, 1, 1, 1]
+*/
+
+class Main {
+  public static void main(String[] args) {
+  
+  Scanner scan = new Scanner(System.in); 
+	int wholeNumber = scan.nextInt();
+	int [] binary = new int [8]; 
+	for (int idx = 0; idx < binary.length; idx++) {
+		
+		binary[idx] = wholeNumber % 2; 
+		wholeNumber /= 2; 
+	}
+	
+	for (int j = 0; j < binary.length/2; j++) 
+		int temp = binary[j]; 
+		binary[j] = binary[binary.length-1 + (-j)];
+		binary[binary.length-1 + (-j)] = temp; 
+	  }
+		System.out.println(Arrays.toString(binary));  
+  }
+}
