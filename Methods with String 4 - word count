@@ -1,0 +1,26 @@
+/*This method gets a string and returns the word count of that string.
+
+example:
+wordCount("foo bar")
+returns 2
+
+wordCount("one two three")
+returns 3
+
+wordCount("bla")
+returns 1*/ 
+
+class Main {
+  
+  public static int wordCount(String words) {
+    
+    String [] splitword = words.split(" "); 
+		int counter = 0; 
+		
+		for (int idx = 0; idx < splitword.length; idx++) {
+				counter++; 
+		}
+			return counter;    
+  }
+  
+}
