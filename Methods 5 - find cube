@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+/*write a method called cube that asks the user for a number and then prints the cubed value of that number:
+
+for example
+insert number: 5
+cube of 5 = 125
+hint:
+cube of a number n = n*n*n*/
+
+class Main {
+  
+ public static void cube() {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("insert number");
+		int number = scan.nextInt(); 
+		System.out.println("cube of 5 = " + (number * number * number));
+	}
+  
+  public static void main(String[] args) {
+    
+    cube();
+   
+  }
+}
