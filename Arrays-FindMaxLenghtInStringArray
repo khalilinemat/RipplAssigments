@@ -1,0 +1,33 @@
+import java.util.*;
+
+
+/*
+  Given the array words, it will print the word with the largest length. 
+  Assume that there are no 2 words with longest length
+  Example:
+  words -> ["aaa", "bbbbb", "whasstupppp", "longg" , "jaaaaavvaaaaaaaaaa"]
+  prints jaaaaavvaaaaaaaaaa
+  */
+  
+  //Main method 
+    class Main { 
+    
+    public static void main(String[] args){
+	  Scanner input = new Scanner(System.in);
+		String[] words = new String[5];
+		for(int i = 0; i < 5;  i++) {
+		  words[i] = input.nextLine();
+		}
+    
+    //code below here 
+	String max = ""; 
+	for (String word1 : words) {
+	
+		if (word1.length() > max.length()) {
+			   max=word1; 
+		}
+	}
+		System.out.println(max);
+	}
+
+}
