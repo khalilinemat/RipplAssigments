@@ -1,0 +1,31 @@
+/*Create a method printHollowRect that prints a 5 on 5 hollow rectangle:
+*****
+*   *
+*   *
+*   *
+*****
+hint:you will need to use two nested for loops for that, and an if that checks if its the last or first iteration of the loop 
+(so you will know whet to print "*" or " ")*/
+
+class Main {
+  
+  	public static void printHollowRect() {
+			int n = 4; 
+			for (int idx = 0; idx <= n; idx++) {
+				for (int j = 0; j <= n; j++) {
+					if (idx==0 || j==0 || idx==n || j==n) {
+						System.out.print(" * ");
+					} else {
+						System.out.print("   ");
+					}
+				}
+				 
+				System.out.println();
+			}		
+		}
+  
+  public static void main(String[] args) {
+   
+    printHollowRect();
+  }
+}
