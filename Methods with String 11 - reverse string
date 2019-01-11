@@ -1,0 +1,22 @@
+/*
+reverse method reverse a string.
+it gets a string and returns it in reverse.
+
+for example:
+
+reverse("foo") ==> "oof"
+reverse("student") ==> "tnedust"
+*/
+
+class Main {
+	public static String reverse(String input){
+	  
+	  String str = ""; 
+		for (int idx = input.length()-1; idx >= 0; idx--) {
+			
+			str += input.charAt(idx); 
+			 
+		}
+			return str;
+	}
+}
