@@ -1,0 +1,49 @@
+/*
+Palindrome is a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+So method isPalindrome checks that and returns true if check is palindrome and false if it is not.
+
+- make your conditions case insensitive.  ex: Civic and civic are both palindromes
+- make your conditions space insensitive.  Race car is a palindrome even though there is space in between.
+
+Examples:
+
+isPalindrome("Noon") ==> true
+isPalindrome("I am not palindrome") ==> false
+isPalindrome("wooden") ==> false
+isPalindrome("Nurses Run") ==> true
+*/ 
+
+class Main {
+  public static boolean isPalindrome(String check) {
+    
+   		boolean isPal = false;
+		String check1 = check.toLowerCase(); 
+		int idx = 0; 
+		int j = check.length()-1; 
+		
+		while (idx < j) {
+			
+			while (check1.charAt(idx) == ' ') {
+				idx++; 
+			}
+			  while (check1.charAt(j) == ' ') {
+				j--; 
+			}
+			
+			if (check1.charAt(idx) == check1.charAt(j)) {	
+				idx++; 
+				j--; 
+			}
+			else {
+				break; 
+			}
+		  }
+			if (idx >= j) {
+				isPal = true; 
+			} 
+			else {
+				isPal = false; 
+			}
+			return isPal;  
+  }
+}
