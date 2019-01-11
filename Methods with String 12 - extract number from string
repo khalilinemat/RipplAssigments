@@ -1,0 +1,22 @@
+
+/*extractNum
+
+description:
+a method that cleans any non number string from a string it gets
+and returns the clean string
+input:
+-s (string)- a string the method gets
+return: string: a string of numbers only
+
+Example: 
+extractNum("aa2aa3") ==> 23
+extractNum("aa2") ==> 2
+extractNum("aa10aa") ==> 10
+extractNum("aa!!%$#.10aa") ==> 10*/ 
+
+class Main {
+  public static String extractNum(String s) { 
+		String result = s.replaceAll("[^0-9]", ""); 
+		return result; 
+  }
+}
