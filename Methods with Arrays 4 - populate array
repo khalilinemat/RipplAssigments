@@ -1,0 +1,31 @@
+import java.util.Arrays;
+/*
+populate method accepts an empty int array and populates it with numbers counting up.
+for example:
+
+populate(new int[3])
+returns:[1,2,3]
+
+populate(new int[5])
+returns:[1,2,3,4,5]*/
+
+class Main {
+	public static int[] populate(int[] r) {
+		
+		int [] currentArr = new int [r.length]; 
+		
+		int counter = 0; 
+		for (int idx = 0; idx < r.length; idx++) {
+			counter++; 
+			currentArr [idx] = counter; 
+		}
+			return currentArr;
+	}
+	public static void main(String[] args) {
+	
+    int [] i= new int[3]; 
+    i= populate(i) ;
+    System.out.println(Arrays.toString(i));
+
+	}
+}
